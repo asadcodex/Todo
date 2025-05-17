@@ -8,13 +8,19 @@ function Todo() {
   ]);
   const [newTask, setNewTask] = useState("");
 
-  function addTask() {}
+  function addTask() {
+    if (newTask.trim() !== "") {
+      setTasks((t) => [...t, newTask]);
+      setNewTask("");
+    }
+  }
 
-  function deleteTask() {}
+  function deleteTask(index) {
+    const updatedTasks = tasks.filter((_, i) => i !== index);
+    setTasks(updatedTasks);
+  }
 
-  function moveTaskUp(index) {}
-
-  function moveTaskDown(index) {}
+  
 
   return (
     <div className="to-do-list">
