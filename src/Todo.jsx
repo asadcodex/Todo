@@ -68,6 +68,7 @@ function Todo() {
             </button>
             <button className="move-button" onClick={() => moveTaskDown(index)}>
               👇
+            </button>
           </li>
         ))}
       </ol>
